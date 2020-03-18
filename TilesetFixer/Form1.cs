@@ -84,7 +84,7 @@ namespace TilesetFixer
 					config = JsonConvert.DeserializeObject<Config>(File.ReadAllText(ConfigFile));
 				textBox2.Text = config.OutputPath;
 				cb_add_suffix.Checked = config.AddSuffix;
-				cb_add_suffix.Checked = config.AutoReplace;
+				cb_autoreplace.Checked = config.AutoReplace;
 				nud_HorizontalSpacing.Value = config.HorizontalSpacing;
 				nud_VerticalSpacing.Value = config.VerticalSpacing;
 				nud_width.Value = config.Width;
@@ -102,7 +102,7 @@ namespace TilesetFixer
 			{
 				config.OutputPath = textBox2.Text;
 				config.AddSuffix = cb_add_suffix.Checked;
-				config.AutoReplace = cb_add_suffix.Checked;
+				config.AutoReplace = cb_autoreplace.Checked;
 				config.HorizontalSpacing = (int)nud_HorizontalSpacing.Value;
 				config.VerticalSpacing = (int)nud_VerticalSpacing.Value;
 				config.Width = (int)nud_width.Value;
