@@ -6,9 +6,9 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("TilesetFixer")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Fixer for tilesets mainly designed for Godot Engine.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Dmitriy Salnikov")]
 [assembly: AssemblyProduct("TilesetFixer")]
 [assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]

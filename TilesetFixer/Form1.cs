@@ -70,6 +70,7 @@ namespace TilesetFixer
 			}
 
 			openFileDialog1.Filter = filter;
+			Icon = Properties.Resources.hero_fixed_small;
 		}
 
 		private void LoadConfig()
