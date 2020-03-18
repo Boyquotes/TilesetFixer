@@ -39,7 +39,7 @@
 			this.checkBox1 = new System.Windows.Forms.CheckBox();
 			this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
 			this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-			this.nud_HorisontalSpacing = new System.Windows.Forms.NumericUpDown();
+			this.nud_HorizontalSpacing = new System.Windows.Forms.NumericUpDown();
 			this.label3 = new System.Windows.Forms.Label();
 			this.label4 = new System.Windows.Forms.Label();
 			this.nud_width = new System.Windows.Forms.NumericUpDown();
@@ -48,7 +48,7 @@
 			this.label6 = new System.Windows.Forms.Label();
 			this.nud_VerticalSpacing = new System.Windows.Forms.NumericUpDown();
 			this.timer1 = new System.Windows.Forms.Timer(this.components);
-			((System.ComponentModel.ISupportInitialize)(this.nud_HorisontalSpacing)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.nud_HorizontalSpacing)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.nud_width)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.nud_height)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.nud_VerticalSpacing)).BeginInit();
@@ -134,11 +134,11 @@
 			// 
 			// nud_HorisontalSpacing
 			// 
-			this.nud_HorisontalSpacing.Location = new System.Drawing.Point(15, 142);
-			this.nud_HorisontalSpacing.Name = "nud_HorisontalSpacing";
-			this.nud_HorisontalSpacing.Size = new System.Drawing.Size(69, 20);
-			this.nud_HorisontalSpacing.TabIndex = 8;
-			this.nud_HorisontalSpacing.Value = new decimal(new int[] {
+			this.nud_HorizontalSpacing.Location = new System.Drawing.Point(15, 142);
+			this.nud_HorizontalSpacing.Name = "nud_HorisontalSpacing";
+			this.nud_HorizontalSpacing.Size = new System.Drawing.Size(69, 20);
+			this.nud_HorizontalSpacing.TabIndex = 8;
+			this.nud_HorizontalSpacing.Value = new decimal(new int[] {
             1,
             0,
             0,
@@ -202,7 +202,7 @@
 			this.label6.Name = "label6";
 			this.label6.Size = new System.Drawing.Size(122, 13);
 			this.label6.TabIndex = 15;
-			this.label6.Text = "Horisontal Tiles spacing:";
+			this.label6.Text = "Horizontal Tiles spacing:";
 			// 
 			// nud_VerticalSpacing
 			// 
@@ -235,7 +235,7 @@
 			this.Controls.Add(this.label4);
 			this.Controls.Add(this.nud_width);
 			this.Controls.Add(this.label3);
-			this.Controls.Add(this.nud_HorisontalSpacing);
+			this.Controls.Add(this.nud_HorizontalSpacing);
 			this.Controls.Add(this.checkBox1);
 			this.Controls.Add(this.button3);
 			this.Controls.Add(this.button2);
@@ -253,7 +253,7 @@
 			this.DragDrop += new System.Windows.Forms.DragEventHandler(this.Form1_DragDrop);
 			this.DragEnter += new System.Windows.Forms.DragEventHandler(this.Form1_DragEnter);
 			this.DragLeave += new System.EventHandler(this.Form1_DragLeave);
-			((System.ComponentModel.ISupportInitialize)(this.nud_HorisontalSpacing)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.nud_HorizontalSpacing)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.nud_width)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.nud_height)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.nud_VerticalSpacing)).EndInit();
@@ -274,7 +274,7 @@
 		private System.Windows.Forms.CheckBox checkBox1;
 		private System.Windows.Forms.OpenFileDialog openFileDialog1;
 		private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
-		private System.Windows.Forms.NumericUpDown nud_HorisontalSpacing;
+		private System.Windows.Forms.NumericUpDown nud_HorizontalSpacing;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.NumericUpDown nud_width;

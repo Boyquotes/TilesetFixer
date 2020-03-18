@@ -40,7 +40,7 @@ namespace TilesetFixer
 			public int Height = 32;
 
 			[JsonProperty("hor_spacing")]
-			public int HorisontalSpacing = 1;
+			public int HorizontalSpacing = 1;
 
 			[JsonProperty("ver_spacing")]
 			public int VerticalSpacing = 1;
@@ -81,7 +81,7 @@ namespace TilesetFixer
 					config = JsonConvert.DeserializeObject<Config>(File.ReadAllText(ConfigFile));
 				textBox2.Text = config.OutputPath;
 				checkBox1.Checked = config.AddSuffix;
-				nud_HorisontalSpacing.Value = config.HorisontalSpacing;
+				nud_HorizontalSpacing.Value = config.HorizontalSpacing;
 				nud_VerticalSpacing.Value = config.VerticalSpacing;
 				nud_width.Value = config.Width;
 				nud_height.Value = config.Height;
@@ -98,7 +98,7 @@ namespace TilesetFixer
 			{
 				config.OutputPath = textBox2.Text;
 				config.AddSuffix = checkBox1.Checked;
-				config.HorisontalSpacing = (int)nud_HorisontalSpacing.Value;
+				config.HorizontalSpacing = (int)nud_HorizontalSpacing.Value;
 				config.VerticalSpacing = (int)nud_VerticalSpacing.Value;
 				config.Width = (int)nud_width.Value;
 				config.Height = (int)nud_height.Value;
@@ -212,11 +212,11 @@ namespace TilesetFixer
 
 			var xSize = (int)Math.Ceiling(img.Width / (float)config.Width);
 			var ySize = (int)Math.Ceiling(img.Height / (float)config.Height);
-			var xHalfSpace = (int)Math.Ceiling((float)config.HorisontalSpacing / 2);
+			var xHalfSpace = (int)Math.Ceiling((float)config.HorizontalSpacing / 2);
 			var yHalfSpace = (int)Math.Ceiling((float)config.VerticalSpacing / 2);
 
 			var newImg = new Bitmap(
-				img.Width + ((xSize - 1) * config.HorisontalSpacing),
+				img.Width + ((xSize - 1) * config.HorizontalSpacing),
 				img.Height + ((ySize - 1) * config.VerticalSpacing),
 				_fixIamgeFormat(img.PixelFormat));
 
@@ -228,7 +228,7 @@ namespace TilesetFixer
 			{
 				for (int y = 0; y < ySize; y++)
 				{
-					var tileStartX = config.Width * x + config.HorisontalSpacing * x;
+					var tileStartX = config.Width * x + config.HorizontalSpacing * x;
 					var tileStartY = config.Height * y + config.VerticalSpacing * y;
 
 					newImgDev.DrawImage(img,
@@ -240,7 +240,7 @@ namespace TilesetFixer
 
 			for (int x = 0; x < xSize; x++)
 			{
-				var tileStartX = config.Width * x + config.HorisontalSpacing * x;
+				var tileStartX = config.Width * x + config.HorizontalSpacing * x;
 				var tileEndX = tileStartX + config.Width - 1;
 
 				hLines.Add(new LineAndCopies() { start = tileStartX - xHalfSpace, end = tileStartX - 1, line = tileStartX });
