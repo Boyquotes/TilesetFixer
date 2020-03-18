@@ -36,7 +36,7 @@
 			this.textBox2 = new System.Windows.Forms.TextBox();
 			this.label2 = new System.Windows.Forms.Label();
 			this.button3 = new System.Windows.Forms.Button();
-			this.checkBox1 = new System.Windows.Forms.CheckBox();
+			this.cb_add_suffix = new System.Windows.Forms.CheckBox();
 			this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
 			this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
 			this.nud_HorizontalSpacing = new System.Windows.Forms.NumericUpDown();
@@ -48,6 +48,7 @@
 			this.label6 = new System.Windows.Forms.Label();
 			this.nud_VerticalSpacing = new System.Windows.Forms.NumericUpDown();
 			this.timer1 = new System.Windows.Forms.Timer(this.components);
+			this.cb_autoreplace = new System.Windows.Forms.CheckBox();
 			((System.ComponentModel.ISupportInitialize)(this.nud_HorizontalSpacing)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.nud_width)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.nud_height)).BeginInit();
@@ -116,26 +117,26 @@
 			this.button3.UseVisualStyleBackColor = true;
 			this.button3.Click += new System.EventHandler(this.button3_Click);
 			// 
-			// checkBox1
+			// cb_add_suffix
 			// 
-			this.checkBox1.AutoSize = true;
-			this.checkBox1.Checked = true;
-			this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
-			this.checkBox1.Location = new System.Drawing.Point(15, 168);
-			this.checkBox1.Name = "checkBox1";
-			this.checkBox1.Size = new System.Drawing.Size(127, 17);
-			this.checkBox1.TabIndex = 7;
-			this.checkBox1.Text = "Add Suffix to fixed file";
-			this.checkBox1.UseVisualStyleBackColor = true;
+			this.cb_add_suffix.AutoSize = true;
+			this.cb_add_suffix.Checked = true;
+			this.cb_add_suffix.CheckState = System.Windows.Forms.CheckState.Checked;
+			this.cb_add_suffix.Location = new System.Drawing.Point(15, 168);
+			this.cb_add_suffix.Name = "cb_add_suffix";
+			this.cb_add_suffix.Size = new System.Drawing.Size(127, 17);
+			this.cb_add_suffix.TabIndex = 7;
+			this.cb_add_suffix.Text = "Add Suffix to fixed file";
+			this.cb_add_suffix.UseVisualStyleBackColor = true;
 			// 
 			// openFileDialog1
 			// 
 			this.openFileDialog1.FileName = "openFileDialog1";
 			// 
-			// nud_HorisontalSpacing
+			// nud_HorizontalSpacing
 			// 
 			this.nud_HorizontalSpacing.Location = new System.Drawing.Point(15, 142);
-			this.nud_HorizontalSpacing.Name = "nud_HorisontalSpacing";
+			this.nud_HorizontalSpacing.Name = "nud_HorizontalSpacing";
 			this.nud_HorizontalSpacing.Size = new System.Drawing.Size(69, 20);
 			this.nud_HorizontalSpacing.TabIndex = 8;
 			this.nud_HorizontalSpacing.Value = new decimal(new int[] {
@@ -222,12 +223,23 @@
 			this.timer1.Interval = 1000;
 			this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
 			// 
+			// cb_autoreplace
+			// 
+			this.cb_autoreplace.AutoSize = true;
+			this.cb_autoreplace.Location = new System.Drawing.Point(246, 168);
+			this.cb_autoreplace.Name = "cb_autoreplace";
+			this.cb_autoreplace.Size = new System.Drawing.Size(146, 17);
+			this.cb_autoreplace.TabIndex = 16;
+			this.cb_autoreplace.Text = "Auto replace fixed texture";
+			this.cb_autoreplace.UseVisualStyleBackColor = true;
+			// 
 			// Form1
 			// 
 			this.AllowDrop = true;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(404, 228);
+			this.Controls.Add(this.cb_autoreplace);
 			this.Controls.Add(this.label6);
 			this.Controls.Add(this.nud_VerticalSpacing);
 			this.Controls.Add(this.label5);
@@ -236,7 +248,7 @@
 			this.Controls.Add(this.nud_width);
 			this.Controls.Add(this.label3);
 			this.Controls.Add(this.nud_HorizontalSpacing);
-			this.Controls.Add(this.checkBox1);
+			this.Controls.Add(this.cb_add_suffix);
 			this.Controls.Add(this.button3);
 			this.Controls.Add(this.button2);
 			this.Controls.Add(this.textBox2);
@@ -271,7 +283,7 @@
 		private System.Windows.Forms.TextBox textBox2;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Button button3;
-		private System.Windows.Forms.CheckBox checkBox1;
+		private System.Windows.Forms.CheckBox cb_add_suffix;
 		private System.Windows.Forms.OpenFileDialog openFileDialog1;
 		private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
 		private System.Windows.Forms.NumericUpDown nud_HorizontalSpacing;
@@ -283,6 +295,7 @@
 		private System.Windows.Forms.Label label6;
 		private System.Windows.Forms.NumericUpDown nud_VerticalSpacing;
 		private System.Windows.Forms.Timer timer1;
+		private System.Windows.Forms.CheckBox cb_autoreplace;
 	}
 }
 

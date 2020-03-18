@@ -33,6 +33,9 @@ namespace TilesetFixer
 			[JsonProperty("add_suffix")]
 			public bool AddSuffix = true;
 
+			[JsonProperty("auto_replace")]
+			public bool AutoReplace = false;
+
 			[JsonProperty("width")]
 			public int Width = 32;
 
@@ -80,7 +83,8 @@ namespace TilesetFixer
 				if (File.Exists(ConfigFile))
 					config = JsonConvert.DeserializeObject<Config>(File.ReadAllText(ConfigFile));
 				textBox2.Text = config.OutputPath;
-				checkBox1.Checked = config.AddSuffix;
+				cb_add_suffix.Checked = config.AddSuffix;
+				cb_add_suffix.Checked = config.AutoReplace;
 				nud_HorizontalSpacing.Value = config.HorizontalSpacing;
 				nud_VerticalSpacing.Value = config.VerticalSpacing;
 				nud_width.Value = config.Width;
@@ -97,7 +101,8 @@ namespace TilesetFixer
 			try
 			{
 				config.OutputPath = textBox2.Text;
-				config.AddSuffix = checkBox1.Checked;
+				config.AddSuffix = cb_add_suffix.Checked;
+				config.AutoReplace = cb_add_suffix.Checked;
 				config.HorizontalSpacing = (int)nud_HorizontalSpacing.Value;
 				config.VerticalSpacing = (int)nud_VerticalSpacing.Value;
 				config.Width = (int)nud_width.Value;
@@ -148,11 +153,19 @@ namespace TilesetFixer
 					var name = "";
 					var outtex = "";
 
-					if (checkBox1.Checked)
+					if (cb_add_suffix.Checked)
 						name = Path.GetFileNameWithoutExtension(textBox1.Text) + "_fixed" + Path.GetExtension(textBox1.Text);
 					else
 						name = Path.GetFileName(textBox1.Text);
 					outtex = Path.Combine(textBox2.Text, name);
+
+					if (File.Exists(outtex))
+					{
+						if (cb_autoreplace.Checked || MessageBox.Show($"File named \"{outtex}\" already exists.\nDo you want to replace it?", "File already exists", MessageBoxButtons.OKCancel) == DialogResult.OK)
+							File.Delete(outtex);
+						else
+							return;
+					}
 
 					FixTilesetTexture(textBox1.Text, outtex);
 				}
