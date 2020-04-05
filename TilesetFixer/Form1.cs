@@ -293,6 +293,8 @@ namespace TilesetFixer
 			}
 
 			newImg.Save(outTex);
+			newImg.Dispose();
+			img.Dispose();
 		}
 
 		private void timer1_Tick(object sender, EventArgs e)
